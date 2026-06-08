@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tgbotfinder"
+version = "0.1.5"
+description = "Telegram OSINT tool for finding bots, channels, and groups related to a target keyword"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "telethon",
+]
+
+[project.scripts]
+tgbotfinder = "tg_bot_finder.main:main"
+
+[tool.setuptools.packages.find]
+include = ["tg_bot_finder*"]
